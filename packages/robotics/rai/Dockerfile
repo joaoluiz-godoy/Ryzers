@@ -93,6 +93,8 @@ RUN chmod +x /ryzers/test_rai.sh
 COPY manipulation_demo.sh /ryzers/manipulation_demo.sh
 RUN chmod +x /ryzers/manipulation_demo.sh
 COPY lemonade_env.sh openai_env.sh /ryzers/
+# Benchmark video capture: records the demo camera topic to disk for run review
+COPY record_camera.py /ryzers/
 
 EXPOSE 8501
 CMD /ryzers/test_rai.sh
